@@ -27,8 +27,7 @@ exports.obtener = async (req, res) => {
 exports.obtenerid = async (req, res) => {
   try {
     const id = req.params.id;
-    const artistas = await Artista.findById(id).populate("disqueras", {
-      select: { artista: 0 }, // populate reservas
+    const artistas = await Artista.findById(id)/*.populate("disqueras", {
       "_id": 1,
       "nitDisquera": 1,
       "nombreDisquera": 1,
@@ -36,9 +35,7 @@ exports.obtenerid = async (req, res) => {
       "direccionDisquera": 1,
       "estadoDisquera": 1
     } // in reservas, populate habitaciones
-
-
-    );
+    );*/
     res.status(200).json(artistas);
   } catch (error) {
     res.status(500).json(error)
