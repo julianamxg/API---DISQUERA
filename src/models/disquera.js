@@ -1,30 +1,36 @@
-const mongoose = require("mongoose");
+const {Schema,model}=require("mongoose");
 
-const userSchema = mongoose.Schema({
-    nitDisquera: {
+const disqueraSchema = new Schema({
+  _id: {
     type: Number,
     required: true,
   },
 
-  nombreDisquera: {
-    type: String,
-    required: true
-  },
+  nitDisquera: {
+  type: Number,
+  required: true,
+},
 
-  telefonoDisquera: {
-    type: Number,
-    required: true
-  },
+nombreDisquera: {
+  type: String,
+  required: true
+},
 
-  direccionDisquera: {
-    type: String,
-    required: true
-  },
+telefonoDisquera: {
+  type: Number,
+  required: true
+},
 
-  estadoDisquera: {
-    type: String,
-    required: true
-  }
+direccionDisquera: {
+  type: String,
+  required: true
+},
+
+estadoDisquera: {
+  type: String,
+  required: true
+}
 });
 
-module.exports = mongoose.model('Disquera', userSchema);
+  
+  module.exports=model("Disquera",disqueraSchema);

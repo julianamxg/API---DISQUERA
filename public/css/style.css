@@ -1,0 +1,54 @@
+.body{
+    background-color: rgba(246, 244, 244, 0.94);
+}
+
+.card-group{
+    margin: 4rem 7rem 0 7rem;
+}
+
+h1.h1{
+    margin-top: 1rem;
+    text-align: center;
+    color:#3e5959;
+}
+
+img.card-img-top{
+    width: 70%;
+    margin: 1rem auto 0 auto;
+}
+
+a.arti{
+    color: #fff;
+    background-color: #fa8e8e;
+    border-color: #e18080;
+}
+
+a.arti:hover{
+    color: #fff;
+    background-color: #dd7777;
+    border-color: #e18080;
+}
+
+a.alb{
+    color: #fff;
+    background-color: #fc6559;
+    border-color: #f05543;
+}
+
+a.alb:hover{
+    color: #fff;
+    background-color: #ea5045;
+    border-color: #f05543;
+}
+
+a.dis{
+    color:#fff;
+    background-color: #547983;
+    border-color: #3e5959;
+}
+
+a.dis:hover{
+    color:#fff;
+    background-color: #456973;
+    border-color: #3e5959;
+}
