@@ -1,7 +1,11 @@
-const mongoose = require("mongoose");
+const {Schema,model}=require("mongoose");
 
-const userSchema = mongoose.Schema({
-  noDocumento: {
+const artistaSchema = new Schema({
+  _id: {
+    type: Number,
+    required: true,
+  },
+   noDocumento: {
     type: Number,
     required: true,
   },
@@ -36,16 +40,20 @@ const userSchema = mongoose.Schema({
     required: true
   },
 
- idDisquera: {
-  type: String,
-  required: true
-},
+ disquera:[{
+    type:Schema.Types.Number,
+    ref:'Disquera'
+  }],
 
   estadoArtista: {
     type: String,
     required: true
 
-  },
-});
+  }
+  });
 
-module.exports = mongoose.model('Artista', userSchema);
+  /*userSchema.methods.setImg=function setImg(filename) {
+    this.img=`/public/${filename}`;
+    console.log("entró al método "+this.img);
+}*/
+  module.exports=model("Artista",artistaSchema);

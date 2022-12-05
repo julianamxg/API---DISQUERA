@@ -1,6 +1,10 @@
-const mongoose = require("mongoose");
+const {Schema,model}=require("mongoose");
 
-const userSchema = mongoose.Schema({
+const albumSchema = new Schema({
+  _id: {
+    type: Number,
+    required: true,
+  },
   nombreAlbum: {
     type: String,
     required: true,
@@ -11,16 +15,16 @@ const userSchema = mongoose.Schema({
     required: true
   },
 
-  idArtista: {
-    type: String,
-    required: true
-  },
+  artista:[{
+    type:Schema.Types.Number,
+    ref:'Artista'
+  }],
 
   estadoAlbum: {
     type: String,
     required: true
 
-  },
-});
-
-module.exports = mongoose.model('Album', userSchema);
+  }
+   
+  });
+  module.exports=model("Album",albumSchema);
