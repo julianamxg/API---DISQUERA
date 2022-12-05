@@ -1,0 +1,130 @@
+###
+//Disquera
+//Registrar una disquera
+POST http://localhost:9000/api/disquera HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "nitDisquera": 1022987624,
+    "nombreDisquera": "Epic Records",
+    "telefonoDisquera": "7287654",
+    "direccionDisquera": "Carrera 5 # 60 - 42",
+    "estadoDisquera": "Activa"
+}
+
+###
+//Consultar todas las disqueras
+GET http://localhost:9000/api/disquera HTTP/1.1
+
+
+
+###
+//Consultar disquera por id
+GET http://localhost:9000/api/disquera/637e7b714cafe24f7fec1187 HTTP/1.1
+
+
+###
+//Actualizar registro buscandolo por id
+PUT http://localhost:9000/api/disquera/637e7b714cafe24f7fec1187 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nitDisquera": 1022987624,
+    "nombreDisquera": "Epic Records",
+    "telefonoDisquera": "7287654",
+    "direccionDisquera": "Carrera 5 # 60 - 42",
+    "estadoDisquera": "Desactiva"
+}
+
+
+
+###
+//Artista
+//Registrar un artista
+POST http://localhost:9000/api/artista HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "noDocumento": 1022987624,
+    "tipoDocumento": "CC",
+    "nombreArtista": "Raúl",
+    "apellidoArtista": "Ocasio",
+    "nombreArtistico": "Rauw Alejandro",
+    "feNacimArtista": "1993, 01, 10",
+    "emailArtista": "rauwal@gmail.com",
+    "idDisquera": "637ecdfe2c414cb7064de49b" ,
+    "estadoArtista": "Activo"
+}
+
+###
+//Consultar todos los artistas
+GET http://localhost:9000/api/artista HTTP/1.1
+
+
+
+###
+//Consultar artista por id
+GET http://localhost:9000/api/artista/637e7b714cafe24f7fec1187 HTTP/1.1
+
+
+###
+//Actualizar registro buscandolo por id
+PUT http://localhost:9000/api/artista/637e7b714cafe24f7fec1187 HTTP/1.1
+Content-Type: application/json
+
+{
+    "noDocumento": 1029142728,
+    "tipoDocumento": "CC",
+    "nombreArtista": "Salomón",
+    "apellidoArtista": "Villada",
+    "nombreArtistico": "Feid",
+    "feNacimArtista": "1992, 08, 19",
+    "emailArtista": "salomon@gmail.com",
+    "estadoArtista": "Desactivo"
+}
+
+
+
+###
+//Album
+//Registrar un album
+POST http://localhost:9000/api/album HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "nombreAlbum": "Afrodisiaco",
+    "anioPublicacion": 2020,
+    "idArtista": "637ece9885f6ad308fcced95",
+    "estadoAlbum": "Disponible"
+}
+
+###
+//Consultar todos los albumes
+GET http://localhost:9000/api/album HTTP/1.1
+
+
+
+###
+//Consultar album por id
+GET http://localhost:9000/api/album/637e7b714cafe24f7fec1187 HTTP/1.1
+
+
+###
+//Actualizar registro buscandolo por id
+PUT http://localhost:9000/api/album/637e7b714cafe24f7fec1187 HTTP/1.1
+Content-Type: application/json
+
+{
+    "noDocumento": 1029142728,
+    "tipoDocumento": "CC",
+    "nombreArtista": "Salomón",
+    "apellidoArtista": "Villada",
+    "nombreArtistico": "Feid",
+    "feNacimArtista": "1992, 08, 19",
+    "emailArtista": "salomon@gmail.com",
+    "estadoArtista": "Desactivo"
+}
+
