@@ -1,5 +1,4 @@
 const express = require('express');
-const cors = require("cors");
 const morgan = require('morgan');
 const conexionBD = require('./db.conexion');
 const rutasDisquera = require('./routes/disquera.routes');
@@ -24,9 +23,6 @@ app.use(morgan("dev"));
 
 app.use(express.static('public'));
 
-app.use('/public', express.static('public/upload'));
-//app.use('/public', express.static(__dirname + '/public'));
-//app.use("/")
 app.use("/disqueras",rutasDisquera);
 app.use("/albumes",rutasAlbum);
 app.use("/artistas",rutasArtista);

@@ -1,5 +1,5 @@
 const app=require('./app');
 
 app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  console.log("Express escucha el servidor en el puerto %d in %s mode", this.address().port, app.settings.env);
 });

@@ -41,7 +41,7 @@ const artistaSchema = new Schema({
   },
 
  disquera:[{
-    type:Schema.Types.ObjectId,
+    type:Schema.Types.Number,
     ref:'Disquera'
   }],
 

@@ -1,6 +1,10 @@
 const {Schema,model}=require("mongoose");
 
 const albumSchema = new Schema({
+  _id: {
+    type: Number,
+    required: true,
+  },
   nombreAlbum: {
     type: String,
     required: true,
